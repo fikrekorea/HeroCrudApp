@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a th:href="@{'/'}">Back to Home Page</a>
+	<h1>Register a new user</h1>
+	<form action="#" th:action="@{/save}" th:object="${user}" method="post">
+		<table>
+			<tr>
+				<td>
+					<label>First Name</label>
+				</td>
+				<td>
+					<input type="hidden" th:field="*{id}">
+					<input type="text" th:field="*{firstName}" placeholder="First Name">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Last Name</label>
+				</td>
+				<td>
+					<input type="text" th:field="*{lastName}" placeholder="Last Name">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<label>User Name</label>
+				</td>
+				<td>
+					<input type="text" th:field="*{userName}" placeholder="User Name">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<label>Password</label>
+				</td>
+				<td>
+					<input type="password" th:field="*{password}" placeholder="Password">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<button type="submit">Register User</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+</body>
+</html>
